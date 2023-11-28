@@ -1,16 +1,32 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
 <script>
   export let data;
-  let { League } = data;
+  let { blog_post } = data;
 </script>
 
+
+
+
+
 <ul>
-  {#each data.League as League}
-    <li>{League.name_champion}
-      Does this champion do true damage?({League.true_damage})
-    </li>
+  {#each data.blog_post as blog_post}
+    <h1>{blog_post.title_names}
+    </h1>
+    <h2>{blog_post.author_name}</h2>
+    <div>
+      <p>
+        {blog_post.content_body}
+      </p>
+    </div>
+    <div>
+      <p>
+        {blog_post.summary}
+      </p>
+    </div>
+    <p>
+      {blog_post.blog_tags}
+    </p>
+
   {/each}
 </ul>
 

@@ -1,8 +1,8 @@
 import { supabase } from "$lib/supabaseClient";
 
 export async function load() {
-  const { data } = await supabase.from("League").select();
+  const { data } = await supabase.from("blog_post").select();
   return {
-    League: data ?? [],
+    blog_post: data ?? [],
   };
 }

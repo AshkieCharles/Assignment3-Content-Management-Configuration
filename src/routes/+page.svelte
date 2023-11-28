@@ -10,7 +10,6 @@
     <h2>Created by: {blog_post.author_name}</h2>
     <h3>
       Published on {blog_post.date_time}
-      {blog_post.date}
     </h3>
     <div>
       <p>
